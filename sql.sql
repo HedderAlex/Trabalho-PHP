@@ -1,6 +1,14 @@
-CREATE TABLE seila(
-
+CREATE TABLE aluno(
+    cpf INTEGER(11) PRIMARY KEY NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    nasc DATE NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    curso INTEGER,
+    FOREIGN KEY (curso) REFERENCES curso(curso)
 );
-CREATE TABLE seial2(
-
+CREATE TABLE curso(
+    id INTEGER PRIMARY KEY AUTO INCREMENT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    tipo INTEGER(1) NOT NULL
 );
