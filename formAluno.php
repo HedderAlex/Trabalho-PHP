@@ -3,7 +3,7 @@
     <div class="col-md-3"></div>
     <div class="col-md-6 m-3 p-3">
         <h1>Cadastro de Aluno</h1>
-        <form action="cadastraAluno.php" method="post">
+        <form action="adicionaAluno.php" method="post">
             <div class="mb-3">
                 <label class="form-label" for="nome">Nome do Aluno</label>
                 <input class="form-control" type="text" name="nome" required>
@@ -13,8 +13,8 @@
                 <input class="form-control" type="text" name="cpf" required>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="dn">Data de nascimento</label>
-                <input type="date" name="dn" class="form-control">
+                <label class="form-label" for="nasc">Data de nascimento</label>
+                <input type="date" name="nasc" class="form-control">
             </div>
             <div class="mb-3">
                 <label class="form-label" for="email">E-mail</label>

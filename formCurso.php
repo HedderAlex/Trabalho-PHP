@@ -2,7 +2,7 @@
     <div class="col-md-3"></div>
     <div class="col-md-6 m-3 p-3">
         <h1>Cadastro de Curso</h1>
-        <form action="index.php" method="post">
+        <form action="adicionaCurso.php" method="post">
             <div class="mb-3">
                 <label class="form-label" for="nome">Nome do Curso</label>
                 <input class="form-control" type="text" name="nome">
