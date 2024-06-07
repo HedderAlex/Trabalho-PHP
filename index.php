@@ -25,16 +25,29 @@
         <form action="index.php" method="post">
             <label for="cursoaluno" class="form-label">Alunos por Curso</label>
             <select name="cursoaluno" class="form-select">
-                <option value="">Curso 1</option>
-                <option value="">Curso 2</option>
+                <?php
+                $cursos = [];
+                $resul = $banco->query("SELECT id, nome FROM curso");
+                if ($resul->num_rows > 0) {
+                    while($row = $resul->fetch_assoc()) {
+                            $cursos[] = $row;
+                    }
+                }
+                foreach($cursos as $curso){
+                    echo "<option value=" . $curso['id'] . ">" . $curso['nome'] . "</option>";
+                }
+                ?>
             </select>
+            <input class="btn btn-outline-primary" type="submit" value="Buscar">
         </form>
         <?php
-            if($_POST["view"] == 1){
-                $select = "SELECT * FROM curso";
-            }
-            else if($_POST["view"] == 2){
-                $select = "SELECT * FROM aluno";
+            if(isset($_POST["view"])){
+                if($_POST["view"] == 1){
+                    $select = "SELECT * FROM curso";
+                }
+                else if($_POST["view"] == 2){
+                    $select = "SELECT * FROM aluno";
+                }
             }
         ?>
         <?php
@@ -42,7 +55,7 @@
 
           }
           else if ($_POST["cursoaluno"] == 2){
-            
+
           }
         ?>
     </div>
