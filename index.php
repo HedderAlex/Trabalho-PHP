@@ -9,6 +9,7 @@
 <body>
 <div class="container-fluid">
         <?php
+            require "conectaBanco.php";
             include 'menu.php';
         ?>
         <form action="index.php" method="post">
@@ -21,13 +22,28 @@
             </div>
             <input class="btn btn-outline-primary" type="submit" value="Buscar">
         </form>
+        <form action="index.php" method="post">
+            <label for="cursoaluno" class="form-label">Alunos por Curso</label>
+            <select name="cursoaluno" class="form-select">
+                <option value="">Curso 1</option>
+                <option value="">Curso 2</option>
+            </select>
+        </form>
         <?php
             if($_POST["view"] == 1){
-
+                $select = "SELECT * FROM curso";
             }
             else if($_POST["view"] == 2){
-                
+                $select = "SELECT * FROM aluno";
             }
+        ?>
+        <?php
+          if($_POST["cursoaluno"] == 1){
+
+          }
+          else if ($_POST["cursoaluno"] == 2){
+            
+          }
         ?>
     </div>
 </body>
