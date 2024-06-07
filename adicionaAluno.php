@@ -6,10 +6,15 @@
     $email = $_POST['email'];
     $fone = $_POST['fone'];
     $curso = $_POST['curso'];
-    $sql = "INSERT INTO aluno(cpf,nome,nasc,email,telefone,curso) VALUES ('$cpf','$nome','$nasc','$email','$fone','$curso')";
-    $banco->query($sql);
-    if($banco->affected_rows == 1){
-        echo "<p> Aluno cadastrado com sucesso!</p>";
+    if($nome != "" and $cpf != "" and $email != "" and $telefone != "" and $curso != 0){
+        $sql = "INSERT INTO aluno(cpf,nome,nasc,email,telefone,curso) VALUES ('$cpf','$nome','$nasc','$email','$fone','$curso')";
+        $banco->query($sql);
+        if($banco->affected_rows == 1){
+            echo "<p> Aluno cadastrado com sucesso!</p>";
+        }
+        else{
+            echo "Erro ao inserir os dados";
+        }
     }
     header('Location:index.php');
     $banco->close();
