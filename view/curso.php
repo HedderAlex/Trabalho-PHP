@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-                <form action="controller/CursoController.php" method="post">
+                <form action="../controller/CursoController.php" method="post">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
                         <input type="text" name="nome" class="form-control" required>
@@ -48,8 +48,10 @@
                       </tr>
                     </thead>
                     <tbody>
-
-                      <?php foreach ($cursoDao->read() as $c1) :?>
+                    <?php
+                        if(isset($cursoDao)){
+                            foreach ($cursoDao->read() as $c1) : 
+                    ?>
                         <tr>
                             <td><?= $c1->getId() ?></td>
                             <td><?= $c1->getNome() ?></td>
@@ -60,6 +62,9 @@
                             </td>
                         </tr>
                         <?php endforeach ?>
+                    <?php 
+                        } 
+                    ?>
                     </tbody>
                   </table>
             </div>
