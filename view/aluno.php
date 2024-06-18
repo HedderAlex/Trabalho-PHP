@@ -8,6 +8,19 @@
     <title>Aluno</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.php">Trabalho PHP</a>
+        <div>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="AlunoForm.php">Alunos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CursoForm.php">Cursos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-3"></div>
@@ -46,7 +59,7 @@
                                 }
                             }
                             foreach ($cursos as $curso) {
-                                echo "<option value=" . $curso['id'] . ">" . $curso['nome'] . "</option>";
+                                echo '<option value="' . $curso['id'] . '">' . $curso['nome'] . "</option>";
                             }
                         ?>
                         </select>

@@ -6,6 +6,7 @@ class Aluno{
     private $email;
     private $telefone;
     private $curso;
+/*
     public function __construct($cpf, $nome, $nasc, $email, $telefone){
         $this->cpf = $cpf;
         $this->nome = $nome;
@@ -13,6 +14,7 @@ class Aluno{
         $this->email = $email;
         $this->telefone = $telefone;
     }
+*/
     public function getCpf(){
         return $this->cpf;
     }
