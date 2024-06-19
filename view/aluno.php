@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.php">Trabalho PHP</a>
+        <a class="navbar-brand" href="../../TrabalhoPHP/index.php">Trabalho PHP</a>
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item active">

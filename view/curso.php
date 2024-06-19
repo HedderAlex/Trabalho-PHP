@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.php">Trabalho PHP</a>
+        <a class="navbar-brand" href="../../TrabalhoPHP/index.php">Trabalho PHP</a>
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-                <form action="../controller/CursoController.php" method="post">
+                <form action="../../TrabalhoPHP/controller/CursoController.php" method="post">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
                         <input type="text" name="nome" class="form-control" required>
@@ -71,7 +71,8 @@
                             <td><?= $c1->getTipo() ?></td>
                             <td>
                                 <a href="controller/CursoController.php?del=<?= $c1->getId() ?>">
-                                <button class="btn  btn-danger btn-sm" type="button">Excluir</button>
+                                    <button class="btn  btn-danger btn-sm" type="button">Excluir</button>
+                                </a>
                             </td>
                         </tr>
                         <?php endforeach ?>

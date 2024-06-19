@@ -17,6 +17,7 @@ class CursoDao{
             $sql = "SELECT * FROM curso";
             $result = ConnectionFactory::getConnection()->query($sql);
             $lista = $result->fetchAll(PDO::FETCH_ASSOC);
+            $c1_lista = [];
             foreach($lista as $l){
                 $c1_lista[] = $this->listaCursos($l);
             }
